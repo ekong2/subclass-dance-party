@@ -2,15 +2,48 @@
 <html>
   <head>
     <title>Object Dance Party</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+     
+<!-- <div class='wrapper'>
+<div class="box">
+  <div class="container-1">
+      <input type="search" id="search" placeholder="Type command" />
+  </div>
+</div>
+</div> -->
+
+<div>
+<button type="button" class="btn btn-default" id="free">Free for all</button>
+<button type="button" class="btn btn-default" id="kanye">Kanyeify</button>
+<button type="button" class="btn btn-default" id="music">Change music</button>
+<button type="button" class="btn btn-default" id="kim">Bring out Kim!</button>
+<button type="button" class="btn btn-default" data-dancer="makeBlinkyDancer" id="dancer">Add dancer</button>
+</div>
+
+    <!-- <div class="container-fluid">
+    <div class="row padding-md-top">
+      <div class="col-md-12 col-md-offset-4">
+        <form class="form-inline">
+          <input type="text" id="input">
+        </form>
+      </div> 
+    </div>
+    </div> -->
+
+    <audio controls autoplay id="song" class='song' loop>
+      <source id="track" src="src/Song.mp3" type="audio/ogg">
+    </audio>
+      <div class="dancer">
+        <img src="src/kanye.png" id="image"class="oscillate" />
+        <img src="src/dance2.gif" id="bodyGif"/>
+      </div>
     <script src="src/init.js"></script>
+    <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>

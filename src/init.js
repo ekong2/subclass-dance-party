@@ -1,6 +1,8 @@
 $(document).ready(function(){
   window.dancers = [];
 
+  // $('body').getElementById('#song').play();
+
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on index.html. You should only need to make one small change to it.
@@ -21,7 +23,7 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
+    
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
@@ -29,5 +31,64 @@ $(document).ready(function(){
     );
     $('body').append(dancer.$node);
   });
+
+  // $('#image').click(function() {
+  //   $(this).addClass('oscillate');
+  //   console.log('hi');
+  // });
+
+  // $('.wrapper').on({
+  //   mouseenter:function() {
+  //     $('.box').toggle();
+  //   },
+
+  //   mouseleave:function() {
+  //     $('.box').toggle();
+  //   }
+  // });
+
+  // $('#search').keypress(function(e){
+  //   if (e.which === 13){
+  //     var command = $('input').val();
+  //     executeCommand(command);
+  //     $('input').val("");
+
+  //   }
+  // });
+
+  function executeCommand(command){
+    console.log(command);
+  };
+
+  $('#free').click(function() {
+
+  });
+
+
+  $('#kanye').click(function() {
+
+  });
+
+  $('#music').click(function() {
+    var track = $('#track').attr("src");
+    var newSong;
+    console.log(track);
+    if (track === 'src/Song.mp3'){
+      newSong = "src/Song2.mp3";
+    } else {
+      newSong = "src/Song.mp3"
+    }
+    $('#track').attr("src", newSong);
+    $('#song').attr("src", newSong);
+  });
+
+  $('#kim').click(function() {
+
+  });
+
+  $('#dancer').click(function() {
+    
+  });
+
 });
 
