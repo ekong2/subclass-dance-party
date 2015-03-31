@@ -1,14 +1,18 @@
 // Creates and returns a new dancer object that can step
-var makeDancer = function(face, body, stop, left, timeBetweenSteps){
+var makeDancer = function(face, body, top, left, timeBetweenSteps){
 
   this.timeBetweenSteps = timeBetweenSteps;
   this.face = face;
   this.body = body;
   this.top = top;
   this.left = left; 
-  this.$node = $('<span class="dancer"></span>');
-  this.giphyBetaKey = 'dc6zaTOxFJmzC';
-  
+
+  this.$face = $('<image class="image" />')
+  this.$face.attr("src", this.face);
+
+  this.$body = $('<image class="image" />')
+  this.$body.attr("src", this.body);
+
   this.step.call(this); 
   this.setPosition(this.top, this.left);
 };
@@ -30,7 +34,13 @@ makeDancer.prototype.setPosition = function(top, left){
     top: top,
     left: left
   };
-  this.$node.css(styleSettings);
+
+  this.$body.css(styleSettings);
+  this.$face.css(styleSettings);
+
+  this.$body.addClass('');
+  this.$face.css(styleSettings);
+
 };
 
 
