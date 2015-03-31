@@ -9,7 +9,7 @@
     <script src="src/blinkyDancer.js"></script>
   </head>
   <body>
-     
+
 <!-- <div class='wrapper'>
 <div class="box">
   <div class="container-1">
@@ -19,11 +19,12 @@
 </div> -->
 
 <div>
-<button type="button" class="btn btn-default" id="free">Free for all</button>
+<button type="button" class="btn btn-default" id="lineup">Line Up</button>
 <button type="button" class="btn btn-default" id="kanye">Kanyeify</button>
 <button type="button" class="btn btn-default" id="music">Change music</button>
 <button type="button" class="btn btn-default" id="kim">Bring out Kim!</button>
 <button type="button" class="btn btn-default" data-dancer="makeBlinkyDancer" id="dancer">Add dancer</button>
+<button type="button" class="btn btn-default" data-dancer="makeBlinkyDancer" id="clear">Clear the floor</button>
 </div>
 
     <!-- <div class="container-fluid">
@@ -32,17 +33,13 @@
         <form class="form-inline">
           <input type="text" id="input">
         </form>
-      </div> 
+      </div>
     </div>
     </div> -->
 
     <audio controls autoplay id="song" class='song' loop>
-      <source id="track" src="src/Song.mp3" type="audio/ogg">
+      <source id="track" src="./media/Song.mp3" type="audio/ogg">
     </audio>
-      <div class="dancer">
-        <img src="src/kanye.png" id="image"class="oscillate" />
-        <img src="src/dance2.gif" id="bodyGif"/>
-      </div>
     <script src="src/init.js"></script>
     <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>

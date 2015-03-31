@@ -1,28 +1,34 @@
 // Creates and returns a new dancer object that can step
-var makeDancer = function(face, body, top, left, timeBetweenSteps){
+var makeDancer = function(face, body, top, left, id){
 
-  this.timeBetweenSteps = timeBetweenSteps;
+  this.timeBetweenSteps = 2000;
   this.face = face;
   this.body = body;
   this.top = top;
-  this.left = left; 
+  this.left = left;
+  this.id = id;
 
-  this.$face = $('<image class="image" />')
-  this.$face.attr("src", this.face);
+  this.$head = $('<image class="oscillate head" src="' + this.face + '"/>');
+  this.$body = $('<image class="bodyGif body" src="' + this.body + '"/>');
 
-  this.$body = $('<image class="image" />')
-  this.$body.attr("src", this.body);
+  if (face === './media/kanye.png'){
+    this.$head.addClass('kanyewest');
+  }
 
-  this.step.call(this); 
+
+  this.step.call(this);
   this.setPosition(this.top, this.left);
+
 };
-  // var dancer = {};
-
-
   // use jQuery to create an HTML <span> tag
 makeDancer.prototype.step = function(){
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
+  if($('.kanyewest').attr('src') === "./media/kanye.png") {
+    $('.kanyewest').attr('src',"./media/kanye2.png");
+  } else {
+    $('.kanyewest').attr('src',"./media/kanye.png");
+  }
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
@@ -30,20 +36,16 @@ makeDancer.prototype.setPosition = function(top, left){
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
-  var styleSettings = {
+  var headStyleSettings = {
     top: top,
-    left: left
+    left: (left + 39),
   };
 
-  this.$body.css(styleSettings);
-  this.$face.css(styleSettings);
+  var bodyStyleSettings = {
+    top: (top + 18),
+    left : left,
+  };
 
-  this.$body.addClass('');
-  this.$face.css(styleSettings);
-
+  this.$body.css(bodyStyleSettings);
+  this.$head.css(headStyleSettings);
 };
-
-
-
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body

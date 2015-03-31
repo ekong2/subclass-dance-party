@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:black;
-  background-image: url('src/dancefloor.jpg');
+  background-image: url('./media/dancefloor.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 24px;
@@ -14,28 +14,10 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
-}
-.topbar{
-  height:32px;
-  background-color: #555;
-}
-.title{
-  background-color: #777;
-}
-
 
 audio.song {
   display: none;
 }
-
-#image{
-  width: 80px;
-  height: auto;
-}
-
 
 /*=======Animation - pawned it off webdeveloperjuice :)==========*/
 @-webkit-keyframes oscillation
@@ -47,7 +29,7 @@ audio.song {
     -webkit-transform:rotate(9deg);
   }
 }
- 
+
 @-moz-keyframes oscillation
 {
   from{
@@ -58,67 +40,21 @@ audio.song {
   }
 }
 
-.oscillate{  
-  -webkit-transform-origin:50% 80px;  
-  -moz-transform-origin:50% 80px;   
+.oscillate{
+  -webkit-transform-origin:50% 80px;
+  -moz-transform-origin:50% 80px;
   -webkit-animation: oscillation 0.2s ease-in-out infinite alternate;
   -moz-animation: oscillation 0.2s ease-in-out infinite alternate;
-  width: 200px; 
-  height:110px;
+  width: 80px;
+  height: auto;
+  position: absolute;
   /*optional*/
   z-index:1;
-  position:absolute;
-  top:217px;
-  left:83px;
 }
 
-#bodyGif {
+.bodyGif {
   position: absolute;
-  top:250px;
-  left: 45px;
   width: 150px;
   height: auto;
   z-index: 0;
-}
-
-/*input {
-  background-color: silver;
-}
-*/
-
-.box {
-  display: none;
-  margin: auto;
-  width: 300px;
-  height: 50px;
-
-}
-
-.container-1{
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-}
-
-.container-1 input#search{
-  width: 300px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #63717f;
-  padding-left: 45px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.wrapper {
-  height: 60px;
-}
-
-.button-bar{
-  
 }
